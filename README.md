@@ -98,6 +98,7 @@ Você pode implantar o projeto em um servidor web ou em plataformas de hospedage
 - - RadioCyberButton.js: Componente do botão menu da tela inicial.
 - - RadioTipos.js: Componente do botão de escolhe do tipo de veículo.
 - - Styled.css: Arquivo contendo todas as estilizações CSS presentes no site.
+- - TrackPrint.js: Componente com função para imprimir pesquisa FIPE.
 - - WheelLoader.js: Animação personalizada mostrada quando não há dados solicitados.
 - Constants:
 - - BASE_URL.js: Contém a base da API utilizada.

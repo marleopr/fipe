@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import colors from "../constants/colors"
+import TrackPrint from "./TrackPrint"
 
 const FipeCard = ({ data }) => {
     return (
@@ -26,6 +27,7 @@ const FipeCard = ({ data }) => {
             </Card>
             <div className="card__content">
             </div>
+            <TrackPrint />
         </div>
     )
 }
