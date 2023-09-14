@@ -1,58 +1,48 @@
-# `DevCoin`
+# `FIPER`
 
-<img src="./src/assets/devCoin logo bit.png" width="300px">
+<img src="./src/assets/musclecarLogo.png" width="300px">
 
-#### Site com informações em tempo real das principais informações sobre a bolsa de valores utilizando a API [brapi](https://brapi.dev/).
+#### Site com informações atualizadas com valores de referência de veículos utilizando a API [Deivid Fortuna](https://deividfortuna.github.io/fipe/).
 
 # `Link`
 
-https://marleo-devcoin.vercel.app/
+https://fiper.vercel.app/
 
 ###### O site tem suporte "adicionar a tela inicial" ou "Instalar PWA" (Progressive Web App).
 
 # `Descrição`
 
-###### O site criado é uma aplicação web de informações úteis sobre ações, criptomoedas, cotações e taxas.
+###### O site criado é uma aplicação web de informações úteis sobre a tabela FIPE (Fundação Instituto de Pesquisas Econômicas).
 
 ###### O site oferece uma experiência intuitiva, permitindo aos usuários obter informações de:
 
 #### Ações e Criptomoedas:
 
-- Código;
-- Valor de mercado;
-- Variação diária;
-- Preço atual;
-- Preço mínimo do dia;
-- Preço máximo do dia;
-- Data e hora da informação;
-- Logotipo da ação;
+- Marca;
+- Modelo;
+- Ano;
+- Combustível;
+- Valor;
+- Código FIPE;
+- Mês de referência
 
-#### Cotações:
+#### Informações úteis de:
 
-- Cotação em tempo real de:
-  -- Dólar Americano (USD);
-  -- Euro (EUR);
-  -- Libra Esterlina (GBP);
-- Conversor de moedas:
-  -- Conversão de Real (BRL) para Dólar, Euro e Libra Esterlina;
+- O que é a tabela FIPE;
+- Placas;
+- Detran;
+- Denatran;
+- Links úteis (Sites e telefones da Polícia Federal (PF), Polícia Rodoviária Federal (PRF), Polícia Civil (PC) e Polícia Militar (PM) de todos os estados brasileiros).
 
-#### Taxas:
+O repositório do projeto pode ser encontrado [aqui](https://github.com/marleopr/fipe)
 
-- Índice Nacional de Preços ao Consumidor Amplo (IPCA) acumulado de 12 meses;
-- Taxa básica de juros da economia (SELIC atual);
-
-O repositório do projeto pode ser encontrado [aqui](https://github.com/marleopr/devCoin)
-
-| Tela de inicial                               | Ações                                |
-| --------------------------------------------- | ------------------------------------ |
-| <img src="src\assets\HomePage.jpg" >          | <img src="src\assets\Acoes.jpg" >    |
-| Criptomoedas                                  | Cotações                             |
-| <img src="src\assets\Criptos.jpg" >           | <img src="src\assets\Cotacoes.jpg" > |
-| Conversor de moedas                           | Taxas                                |
-| <img src="src\assets\CotacoesConversor.jpg" > | <img src="src\assets\Taxas.jpg" >    |
-| Página de Erro                                |                                      |
-
-| <img src="src\assets\ErrorPage.jpg" >
+| Tela de inicial                      | Página de erro                         |
+| ------------------------------------ | -------------------------------------- |
+| <img src="src\assets\HomePage.jpg" > | <img src="src\assets\ErrorPage.jpg" >  |
+| Pesquisa FIPE                        | FIPE pesquisada                        |
+| <img src="src\assets\Fipe.jpg" >     | <img src="src\assets\FipeSearch.jpg" > |
+| Informações úteis                    | Informações úteis                      |
+| <img src="src\assets\Info.jpg" >     | <img src="src\assets\InfoMais.jpg" >   |
 
 # `Passo a Passo para Instalação do Projeto React:`
 
@@ -64,7 +54,7 @@ Git instalado em sua máquina. Você pode baixá-lo em https://git-scm.com/.
 ##### Clone o Repositório:
 
 Abra o terminal (ou Git Bash) e navegue até o diretório onde deseja clonar o projeto.
-Execute o comando: git clone https://github.com/marleopr/devCoin.git
+Execute o comando: git clone https://github.com/marleopr/fipe.git
 
 ##### Acesse o Diretório do Projeto:
 
@@ -97,33 +87,28 @@ Você pode implantar o projeto em um servidor web ou em plataformas de hospedage
 ##### Eu optei por organizar o projeto dividindo em pastas:
 
 - Assets: Contém todas as imagens necessárias ao site.
-- Components: Contém os loaders utilizados:
-- - CoinLoader.js: Loader utilizado no carregamento de informações da API.
+- Components: Contém os loaders, botões, Cards e componentes utilizados:
+- - ButtonAll.js: Botão Chakra UI estilizado.
 - - DownloadButton.js: Componente do botão estilizado para instalação via PWA.
 - - EasterEgg.js: Função para apresentar uma mensagem secreta no console de desenvolvimento.
+- - FipeCard.js: Card que renderiza dados requisitados da API.
 - - Footer.js: Componente de rodapé.
 - - Header.js: Componente de cabeçalho.
-- - RadioButton.js: Componente do botão menu da tela inicial.
-- - SquareLoader.js: Animação personalizada mostrada quando não há dados solicitados.
+- - RadioButtons.js: Componente do botão menu da tela inicial.
+- - RadioCyberButton.js: Componente do botão menu da tela inicial.
+- - RadioTipos.js: Componente do botão de escolhe do tipo de veículo.
 - - Styled.css: Arquivo contendo todas as estilizações CSS presentes no site.
-- - useDebounce.js: Hook React para atrasar as solicitações da API através dos inputs.
+- - WheelLoader.js: Animação personalizada mostrada quando não há dados solicitados.
 - Constants:
 - - BASE_URL.js: Contém a base da API utilizada.
+- - colors.js: Arquivo para padronização de cores do site.
 - - theme.css: Arquivo CSS para padronização de cores do site.
+- - theme.js: Arquivo para padronização de cores do Chakra com extendTheme.
 - Pages:
-- Acoes / Criptos:
-- - AcoesList.js / CriptosList.js: Componente que renderiza a lista com todas as ações/criptomoedas presentes na API.
-- - CardAcoes.js / CardCriptos.js: Componente que mapeia e renderiza as informações das ações/criptomoedas presentes na API.
-- - SearchAcoes.js / SearchCriptos.js: Componente principal das páginas das ações/criptomoedas.
-- Cotacoes:
-- - CardCotacoes.js: Componente que mapeia e renderiza as informações das cotações presentes na API.
-- - Cotacoes.js: Componente principal da páginas de cotações.
-- - ModalCotacoes.js: Componente que exibe a modal de conversão de moedas.
-- Taxas:
-- - CardSelic.js / CardTaxas.js: Componente que mapeia e renderiza as informações de taxas.
-- - Taxas.js: Componente principal da página de taxas.
-- ErrorPage.js: Página de erro.
-- HomePage.js: Componente da tela inicial.
+- - ErrorPage.js: Página de erro.
+- - HomePage.js: Componente da tela inicial.
+- - Info.js: Componente de informações úteis.
+- - SearchTabela.js: Componente de pesquisa FIPE.
 - Routes:
 - - Cordinator / Router: Componentes do React Router Dom.
 
